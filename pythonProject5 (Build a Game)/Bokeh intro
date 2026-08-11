@@ -1,0 +1,10 @@
+from bokeh.plotting import figure, output_file, show
+
+x = [10, 20 ,30, 40 ,50 ,60, 70, 90]
+y = [11, 12, 14, 16, 17, 18, 19, 21]
+
+output_file("line.html")
+
+p = figure(title = "Basic Line Plot", x_axis_label = 'X-axis', y_axis_label = 'Y-axis')
+p.line(x, y, legend = "Price", line_width = 3)
+show(p)
